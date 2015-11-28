@@ -53,7 +53,7 @@ FEDerated MeSsaGe (fedmsg) bus.
 %setup -q
 
 %build
-%{__python} setup.py build
+%py_build
 
 %if %{with tests}
 ./runtests.sh
@@ -61,10 +61,7 @@ FEDerated MeSsaGe (fedmsg) bus.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__python} setup.py install \
-	--skip-build \
-	--optimize=2 \
-	--root=$RPM_BUILD_ROOT
+%py_install
 
 %py_postclean
 
