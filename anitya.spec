@@ -12,6 +12,7 @@ Group:		Applications/WWW
 Source0:	https://fedorahosted.org/releases/a/n/anitya/%{name}-%{version}.tar.gz
 # Source0-md5:	4e97c1b372778f86bf7a9055bbcad53c
 URL:		http://fedorahosted.org/anitya/
+BuildRequires:	rpmbuild(macros) >= 1.710
 BuildRequires:	python-SQLAlchemy >= 0.7.4
 BuildRequires:	python-bunch
 BuildRequires:	python-flask-openid
